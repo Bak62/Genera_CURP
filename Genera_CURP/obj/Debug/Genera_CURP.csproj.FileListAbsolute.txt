@@ -8,3 +8,6 @@ C:\GitHub\Genera_CURP\Genera_CURP\Genera_CURP\obj\Debug\Genera_CURP.csproj.Gener
 C:\GitHub\Genera_CURP\Genera_CURP\Genera_CURP\obj\Debug\Genera_CURP.csproj.CoreCompileInputs.cache
 C:\GitHub\Genera_CURP\Genera_CURP\Genera_CURP\obj\Debug\Genera_CURP.exe
 C:\GitHub\Genera_CURP\Genera_CURP\Genera_CURP\obj\Debug\Genera_CURP.pdb
+C:\GitHub\Genera_CURP\Genera_CURP\Genera_CURP\obj\Debug\Genera_CURP.FRMregistros.resources
+C:\GitHub\Genera_CURP\Genera_CURP\Genera_CURP\bin\Debug\Critza.Bibliotecas.dll
+C:\GitHub\Genera_CURP\Genera_CURP\Genera_CURP\obj\Debug\Genera_CURP.csproj.CopyComplete
