@@ -1,0 +1,10 @@
+C:\GitHub\Genera_CURP\Genera_CURP\Genera_CURP\bin\Debug\Genera_CURP.exe.config
+C:\GitHub\Genera_CURP\Genera_CURP\Genera_CURP\bin\Debug\Genera_CURP.exe
+C:\GitHub\Genera_CURP\Genera_CURP\Genera_CURP\bin\Debug\Genera_CURP.pdb
+C:\GitHub\Genera_CURP\Genera_CURP\Genera_CURP\obj\Debug\Genera_CURP.csprojAssemblyReference.cache
+C:\GitHub\Genera_CURP\Genera_CURP\Genera_CURP\obj\Debug\Genera_CURP.Form1.resources
+C:\GitHub\Genera_CURP\Genera_CURP\Genera_CURP\obj\Debug\Genera_CURP.Properties.Resources.resources
+C:\GitHub\Genera_CURP\Genera_CURP\Genera_CURP\obj\Debug\Genera_CURP.csproj.GenerateResource.cache
+C:\GitHub\Genera_CURP\Genera_CURP\Genera_CURP\obj\Debug\Genera_CURP.csproj.CoreCompileInputs.cache
+C:\GitHub\Genera_CURP\Genera_CURP\Genera_CURP\obj\Debug\Genera_CURP.exe
+C:\GitHub\Genera_CURP\Genera_CURP\Genera_CURP\obj\Debug\Genera_CURP.pdb
