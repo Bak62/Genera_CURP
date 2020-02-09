@@ -38,9 +38,12 @@
             // 
             this.DGVregistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVregistros.Location = new System.Drawing.Point(12, 12);
+            this.DGVregistros.MultiSelect = false;
             this.DGVregistros.Name = "DGVregistros";
+            this.DGVregistros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVregistros.Size = new System.Drawing.Size(495, 475);
             this.DGVregistros.TabIndex = 0;
+            this.DGVregistros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVregistros_CellContentClick);
             // 
             // BTNseleccionar
             // 

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdCURPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbEstado">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="tbPersonas" Relationship="Self.FK_tbPersonas_tbEstados" FromRole="tbEstados" ToRole="tbPersonas" />
+    <NavigationProperty Name="tbPersonas1" Relationship="Self.FK_tbPersonas_tbEstados1" FromRole="tbEstados" ToRole="tbPersonas" />
+  </EntityType>
+  <EntityType Name="tbPersona">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="apellido1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="apellido2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fnacimiento" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="sexo" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="edonac" Type="Int32" Nullable="false" />
+    <Property Name="telefono" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="celular" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="edoact" Type="Int32" Nullable="false" />
+    <Property Name="delact" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="colact" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="calleact" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="numact" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbEstado" Relationship="Self.FK_tbPersonas_tbEstados" FromRole="tbPersonas" ToRole="tbEstados" />
+    <NavigationProperty Name="tbEstado1" Relationship="Self.FK_tbPersonas_tbEstados1" FromRole="tbPersonas" ToRole="tbEstados" />
+  </EntityType>
+  <Association Name="FK_tbPersonas_tbEstados">
+    <End Role="tbEstados" Type="Self.tbEstado" Multiplicity="1" />
+    <End Role="tbPersonas" Type="Self.tbPersona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbEstados">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbPersonas">
+        <PropertyRef Name="edoact" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbPersonas_tbEstados1">
+    <End Role="tbEstados" Type="Self.tbEstado" Multiplicity="1" />
+    <End Role="tbPersonas" Type="Self.tbPersona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbEstados">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbPersonas">
+        <PropertyRef Name="edonac" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="bdCURPEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="tbEstados" EntityType="Self.tbEstado" />
+    <EntitySet Name="tbPersonas" EntityType="Self.tbPersona" />
+    <AssociationSet Name="FK_tbPersonas_tbEstados" Association="Self.FK_tbPersonas_tbEstados">
+      <End Role="tbEstados" EntitySet="tbEstados" />
+      <End Role="tbPersonas" EntitySet="tbPersonas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbPersonas_tbEstados1" Association="Self.FK_tbPersonas_tbEstados1">
+      <End Role="tbEstados" EntitySet="tbEstados" />
+      <End Role="tbPersonas" EntitySet="tbPersonas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

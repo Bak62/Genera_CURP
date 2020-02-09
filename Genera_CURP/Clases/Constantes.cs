@@ -25,5 +25,8 @@ namespace Genera_CURP.Clases
 
         public static string MSG_ERROR_CURP = "Error al generar la CURP";
         public static string MSG_ERROR_GENERAL = "Error";
+
+        public static string MSG_GUARDADO_OK = "Se guardó el registro con éxito";
+        public static string MSG_GUARDADO_ERROR = "Error al guardar el registro";
     }
 }

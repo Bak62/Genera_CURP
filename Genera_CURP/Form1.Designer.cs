@@ -345,6 +345,7 @@
             this.BTNguardar.TabIndex = 3;
             this.BTNguardar.Text = "Guardar Registro";
             this.BTNguardar.UseVisualStyleBackColor = true;
+            this.BTNguardar.Click += new System.EventHandler(this.BTNguardar_Click);
             // 
             // BTNregistros
             // 
